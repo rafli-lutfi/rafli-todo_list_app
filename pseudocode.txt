@@ -1,0 +1,35 @@
+BEGIN
+
+STRING goals, start_date, due_date
+ARRAY task[]
+STRING make_goals
+STRING make_task == "yes"
+NUMBER i = 0
+NUMBER j = 0
+
+INPUT make_goals
+IF make_goals == "yes"
+  THEN INPUT goals
+ELSE CONTINUE
+
+INPUT start_date
+INPUT due_date
+
+WHILE make_task == "yes"
+  INPUT task[i]
+  i = i + 1
+  INPUT make_task
+
+IF make_goals == "yes"
+  PRINT make_goals
+ELSE CONTINUE
+
+PRINT start_date
+PRINT due_date
+
+FOR j < number_of_task
+  PRINT task[j]
+  j = j + 1
+END FOR
+
+END
